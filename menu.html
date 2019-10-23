@@ -6,12 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cómo crear un menú responsive</title>
     <style>
-        
+        *{
+            font-family: Arial, Helvetica, sans-serif; /*Este detalle es unicamente para ver una mejor fuente*/
+        }
+        .navlist li{
+            list-style: none; /*Quitamos los bullets o números*/
+            display: inline-block; /*Colocamos los textos de forma horizontal*/
+            margin: 4px; /*agragamos un margen externo*/
+            padding: 4px;/* y un margen interno*/
+        }
+        .navlist li a{
+            text-decoration: none; /*Quitamos el subrayado o undeline*/
+            color: #f33454;/*agregamos un color, elige el que prefieras*/
+            font-size: 20px;/*agregamos altura a la fuente*/
+        }
+        .navlist li a:hover{ /*agregamos un efecto para cuando coloquemos el mouse sobre las opciones*/
+            border-top: 1px dashed #f33454; /*un borde punteado superior*/
+            border-bottom: 1px dashed #f33454;/*un border punteado inferior*/
+            padding: 8px 0; /*un margen interno para que no queden pegadas las lineas de los bordes*/
+        }
     </style>
 </head>
 <body>
-     <nav> <!-- La etiqueta semántica para un menú de navegación -->
-        <ul>
+     <nav class="navmenu">
+        <ul class="navlist">
             <li><a href="#">Home</a></li>
             <li><a href="#">Bio</a></li>
             <li><a href="#">Blog</a></li>
@@ -19,7 +37,6 @@
             <li><a href="#">Trabajemos juntos</a></li>
         </ul>
     </nav>
-    <!-- Agrega la cantidad de elementos necesarios, en el siguiente tutorial veremos los multinivel -->
 </body>
 </html>
 
