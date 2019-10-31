@@ -40,36 +40,6 @@
             cursor: pointer; /*le decimos que cuando el cursor pase sobre el se muestre como vinculo*/
             z-index: 3; /*Lo subimos de nivel en el eje Z*/
         }
-        @media screen and (max-width: 768px){ /*invocamos la condicion para el cambio de aspecto */
-            .navlist{
-                margin: 0;
-                position: relative;
-                left: -100%; /*lo sacamos del canvas o lienzo*/
-                background-color: rgba(0, 0, 0, 0.4); /*un color de fondo*/
-            }
-            .active{
-                left: 0; /*esta clase "devolverá" el menú a la posición*/
-            }
-            .navlist{
-                text-align: center; /*agregamos estilos del menú en móviles*/
-                height: 100vh;
-                display: grid;
-                justify-content: center;
-                align-content: center;
-            }
-            .navlist li a{
-                width: 100%;
-                display: block;
-            }
-            .navlist li a:hover{
-                background-color: rgba(243, 52, 84, 0.2);
-                color: #FFF;
-                padding: 8px;
-            }
-            .burger{
-                display: block; /*aqui mostramos el botón, en móviles*/
-            }
-        }
     </style>
 </head>
 <body>
@@ -83,18 +53,6 @@
             <li><a href="#">Trabajemos juntos</a></li>
         </ul>
     </nav>
-    <script>
-        const botonmenu = document.querySelector('.burger')
-        const menu = document.querySelector('.navlist')
-        botonmenu.addEventListener('click', toggleMenu)
-        function toggleMenu(){
-            if (menu.classList.contains('active')) {
-                menu.classList.remove('active')
-            } else {
-                menu.classList.add('active')
-            }
-        }
-    </script>
 </body>
 </html>
 
