@@ -84,14 +84,14 @@
         </ul>
     </nav>
     <script>
-        const botonmenu = document.querySelector('.burger')
-        const menu = document.querySelector('.navlist')
-        botonmenu.addEventListener('click', toggleMenu)
-        function toggleMenu(){
-            if (menu.classList.contains('active')) {
-                menu.classList.remove('active')
+        const botonmenu = document.querySelector('.burger') //llamamos al botón y lo asignamos a una variable
+        const menu = document.querySelector('.navlist') // llamamos al listado de opciones y lo asignamos a una variable
+        botonmenu.addEventListener('click', toggleMenu) // al botón le decimos que "Escuche" el evento click y ejecute toggle
+        function toggleMenu(){ // Creamos la función toggle
+            if (menu.classList.contains('active')) { // preguntamos si contiene la clase "active"
+                menu.classList.remove('active') //Si al dar click la contiene hay que removerla
             } else {
-                menu.classList.add('active')
+                menu.classList.add('active')//si no la contiene al dar click hay que agregarla
             }
         }
     </script>
